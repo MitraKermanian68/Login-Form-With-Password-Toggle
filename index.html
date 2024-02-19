@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form With Password Toggle</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/9bf81300c6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="form_box">
+      <h1>Login Here</h1>
+      <div class="input_box">
+        <i class="fa-solid fa-envelope"></i>
+        <input type="email" placeholder="Enter Email" />
+      </div>
+      <div class="input_box">
+        <i class="fa-solid fa-key"></i>
+        <input type="password" placeholder="Enter Password" id="myInput"/>
+        <span class="eye" onclick="myFunction()">
+          <i id="hide1" class="fa-solid fa-eye"></i>
+          <i id="hide2" class="fa-regular fa-eye"></i>
+        </span>
+      </div>
+      <button type="button" class="login_btn">LOGIN</button>
+    </div>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myInput");
+        var y = document.getElementById("hide1");
+        var z = document.getElementById("hide2");
+
+        if (x.type === "password") {
+          x.type = "text";
+          y.style.display = "block";
+          z.style.display = "none";
+        }
+        else{
+          x.type = "password";
+          y.style.display = "none";
+          z.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
